@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+# Install native apps
+
+# web
+brew cask install 1password
+brew cask install google-chrome
+brew cask install microsoft-edge
+brew cask install transmission
+
+# dev
+brew cask install docker
+brew cask install iterm2
+brew cask install visual-studio-code
+
+# design
+brew cask install figma
+
+# communication
+brew cask install skype
+brew cask install slack
+
+# tools
+brew cask install appcleaner
+brew cask install openinterminal
+brew cask install alfred
+brew cask install bartender
+brew cask install command-tab-plus
+brew cask install onedrive
+
+# video
+brew cask install iina
+
+# fonts
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+brew cask install font-input
