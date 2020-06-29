@@ -4,12 +4,13 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jezikk/.oh-my-zsh"
+export DOTFILES="$HOME/.dotfiles"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,9 +77,12 @@ plugins=(
     yarn
     docker
     docker-compose
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/zsh/custom_scripts.sh
 
 # User configuration
 
@@ -106,14 +110,16 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias zsh.reload="source ~/.zshrc"
 alias zsh.config="code ~/.zshrc"
-alias antibody.rebuild="antibody bundle < ~/.dotfiles/zsh/.zsh_plugins.list > ~/.zsh_plugins.sh"
-alias npm.global.list="npm list -g --depth=0"
+alias dotfiles.config="code ~/.dotfiles"
+
 alias cls="clear"
 alias ..="cd .."
 alias ....="cd ../.."
-alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
-alias sdkup="sdk update; sdk selfupdate; sdk flush temp"
-alias updateall="brewup && npm update -g && antibody update && sdkup"
+
+alias brew.update="brew update; brew upgrade; brew cleanup; brew doctor"
+alias sdkman.update="sdk update; sdk selfupdate; sdk flush temp"
+
+alias npm.global.list="npm list -g --depth=0"
 
 # Autocomplete
 autoload -Uz compinit && compinit -i
@@ -121,9 +127,3 @@ autoload -Uz compinit && compinit -i
 # sdkman
 export SDKMAN_DIR="/Users/jezikk/.sdkman"
 [[ -s "/Users/jezikk/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jezikk/.sdkman/bin/sdkman-init.sh"
-
-# autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# antibody plugins
-source ~/.zsh_plugins.sh

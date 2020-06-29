@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-echo "🔧 Setting up your Mac..."
+echo "💻 Setting up your Mac...\n"
 
 # Install non-brew various tools (PRE-BREW Installs)
-echo "Ensuring build/install tools are available"
+echo "➡️ Ensuring build/install tools are available"
 if ! xcode-select --print-path &> /dev/null; then
     # Prompt user to install the XCode Command Line Tools
     xcode-select --install &> /dev/null
@@ -25,43 +25,41 @@ if ! xcode-select --print-path &> /dev/null; then
 fi
 
 if test ! $(which brew); then
+  echo "➡️ Installing homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "✅ Successful installed\n"
 fi
 
-if test ! $(which zsh); then
-	curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh
-fi
-
-echo "📲 Installing homebrew/app store packages..."
+echo "➡️ Installing homebrew/app store packages..."
 sh ./homebrew/brew.sh
 sh ./homebrew/brew_cask.sh
 sh ./macos/app_store.sh
-echo "✅ Successful installed packages"
+echo "✅ Successful installed\n"
 
-echo "🔧 Installing npm global packages..."
-sh ./npm/global.sh
-echo "✅ Successful installed packages"
+echo "➡️ Installing zsh tools..."
+sh ./zsh/install.sh
+echo "✅ Successful installed\n"
 
-echo "🔧 Installing antibody packages..."
-antibody bundle < ./zsh/.zsh_plugins.list > ~/.zsh_plugins.sh
-echo "✅ Successful installed packages"
+echo "➡️ Installing npm global packages..."
+sh ./npm/install.sh
+echo "✅ Successful installed\n"
 
-echo "🔧 Installing sdkman..."
+echo "➡️ Installing sdkman..."
 sh ./sdkman/install.sh
-echo "✅ Successful installed"
+echo "✅ Successful installed\n"
 
 echo "📁 Creating workspaces directories..."
 sh ./macos/create_workspace.sh
-echo "✅ Successful created workspaces"
+echo "✅ Successful created workspaces\n"
 
 echo "🔗 Linking configuration files..."
 sh ./symlink.sh
-echo "✅ Successful linked configuration files"
+echo "✅ Successful linked configuration files\n"
 
 # Install configurations from zsh
 echo "🔧 Setting configuration to iTerm2 and zsh..."
 source $HOME/.zshrc
-echo "✅ Successful configured iTerm2 and zsh"
+echo "✅ Successful configured iTerm2 and zsh\n"
 
 
 echo "⚡️ All right! Restart your machine to complete the configuration."

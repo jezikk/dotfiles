@@ -8,8 +8,7 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-brew install antibody
-brew install autojump
+brew install zsh
 brew install git
 brew install mas
 brew install midnight-commander
