@@ -15,20 +15,12 @@ function update_all {
   brew update; brew upgrade; brew cleanup; brew doctor
   echo "✅ Completed\n"
 
-  echo "📦 Updating ohmyzsh..."
-  upgrade_oh_my_zsh
-  echo "✅ Completed\n"
-
-  echo "📦 Updating ohmyzsh custom plugins..."
-  update_zsh_custom_plugins
+  echo "📦 Updating zsh..."
+  antigen selfupdate; antigen update
   echo "✅ Completed\n"
 
   echo "📦 Updating npm global packages..."
   npm update -g
-  echo "✅ Completed\n"
-
-  echo "📦 Updating sdkman..."
-  sdk update; sdk selfupdate; sdk flush temp
   echo "✅ Completed\n"
 
   echo "⚡️ All right! Your computer is up to date."
