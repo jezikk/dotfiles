@@ -1,7 +1,9 @@
 #!/bin/zsh
 
-function update_zsh_custom_plugins {
-    for plugin in ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/*/; do
+PLUGINS_DIR=$HOME/.plugins
+
+function update_ext_plugins {
+    for plugin in $PLUGINS_DIR/*/; do
       if [ -d "$plugin/.git" ]; then
          printf "${YELLOW}%s${RESET}\n" "${plugin%/}"
          git -C "$plugin" pull --rebase --stat origin master

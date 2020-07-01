@@ -15,8 +15,8 @@ source $DOTFILES/zsh/custom-scripts.sh
 alias antigen.rebuild="antigen reset"
 alias brew.update="brew update; brew upgrade; brew cleanup; brew doctor"
 alias dotfiles.config="code ~/.dotfiles"
-alias zsh.reload="source ~/.zshrc"
 alias zsh.config="code ~/.zshrc"
+alias zsh.reload="source ~/.zshrc"
 
 alias cls="clear"
 alias ..="cd .."
