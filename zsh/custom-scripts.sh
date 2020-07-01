@@ -18,11 +18,15 @@ function update_all {
   echo "✅ Completed\n"
 
   echo "📦 Updating zsh..."
-  antigen selfupdate; antigen update
+  antigen update
   echo "✅ Completed\n"
 
   echo "📦 Updating npm global packages..."
   npm update -g
+  echo "✅ Completed\n"
+
+  echo "🧲 Updating external repos..."
+  update_ext_plugins
   echo "✅ Completed\n"
 
   echo "⚡️ All right! Your computer is up to date."
