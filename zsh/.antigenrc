@@ -7,6 +7,7 @@ antigen bundle command-not-found
 antigen bundle docker
 antigen bundle node
 antigen bundle yarn
+antigen bundle fasd
 
 # Load bundles from external repos.
 antigen bundle zsh-users/zsh-completions

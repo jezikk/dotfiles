@@ -11,6 +11,7 @@ brew upgrade
 brew install zsh
 brew install git
 brew install antigen
+brew install fasd
 brew install mas
 brew install midnight-commander
 brew install node
