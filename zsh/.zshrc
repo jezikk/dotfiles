@@ -24,6 +24,8 @@ alias ....="cd ../.."
 
 alias npm.global.list="npm list -g --depth=0"
 
+alias search_oracle="ack -i --type=oracle"
+
 # Autocomplete
 autoload -Uz compinit && compinit -i
 
