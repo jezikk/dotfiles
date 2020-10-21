@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Install command-line tools using Homebrew
 
@@ -8,6 +8,7 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+brew install wget
 brew install zsh
 brew install git
 brew install antigen
@@ -17,6 +18,7 @@ brew install mas
 brew install midnight-commander
 brew install node
 brew install yarn
+brew install q
 
 # Remove outdated versions from the cellar
 brew cleanup

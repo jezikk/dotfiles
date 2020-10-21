@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Install native apps
 
@@ -12,6 +12,7 @@ brew cask install transmission
 brew cask install docker
 brew cask install iterm2
 brew cask install visual-studio-code
+brew cask install postman
 
 # design
 brew cask install figma
@@ -19,6 +20,7 @@ brew cask install figma
 # communication
 brew cask install skype
 brew cask install slack
+brew cask install microsoft-teams
 
 # tools
 brew cask install appcleaner
@@ -28,7 +30,7 @@ brew cask install bartender
 brew cask install command-tab-plus
 brew cask install onedrive
 
-# video
+# video & audio
 brew cask install iina
 
 # fonts

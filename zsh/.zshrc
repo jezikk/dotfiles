@@ -3,7 +3,7 @@ source /usr/local/share/antigen/antigen.zsh
 
 # Exports
 export DOTFILES="$HOME/.dotfiles"
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 
 # Load Antigen configurations
 antigen init $HOME/.antigenrc

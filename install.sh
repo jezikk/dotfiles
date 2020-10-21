@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 echo "💻 Setting up your Mac...\n"
 
@@ -48,8 +48,9 @@ echo "➡️ Downloading external repos..."
 sh ./plugins/install.sh
 echo "✅ Completed\n"
 
-echo "📁 Creating workspaces directories..."
+echo "📁 Creating workspaces directories and activating settings..."
 sh ./macos/workspace.sh
+sh ./macos/settings.sh
 echo "✅ Successful created workspaces\n"
 
 echo "🔗 Linking configuration files..."
