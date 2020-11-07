@@ -1,0 +1,6 @@
+[user]
+	name = Michal Vrbata
+	email = vrbata@outlook.com
+
+[includeIf "gitdir:~/Documents/Projects/Generali/"]
+    path = ~/.gitconfig-gli
