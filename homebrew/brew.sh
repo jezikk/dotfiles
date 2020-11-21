@@ -20,7 +20,6 @@ brew install node
 brew install yarn
 brew install q
 brew install svn
-brew install luit
 
 # Remove outdated versions from the cellar
 brew cleanup
