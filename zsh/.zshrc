@@ -26,6 +26,9 @@ alias npm.global.list="npm list -g --depth=0"
 
 alias search_oracle="ack -i --type=oracle"
 
+alias python="python3"
+alias pip="pip3"
+
 # Autocomplete
 autoload -Uz compinit && compinit -i
 

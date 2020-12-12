@@ -31,3 +31,23 @@ function update_all {
 
   echo "⚡️ All right! Your computer is up to date."
 }
+
+function create_repo {
+  if ([ $1 = "next" ] && [ $# -eq 2 ]); then
+    echo "\n🧲 Downloading template repository..."
+    git clone https://github.com/jezikk/next-tailwind-starter.git $2
+    cd $2
+    rm -rf .git
+    git init
+
+    echo "\n📦 Downloading packages..."
+    yarn install
+
+    echo "\n🔧 package.json settings:"
+    node -p "JSON.stringify({...require('./package.json'), name: '$2'}, null, 2)"
+
+    echo "\n✅ Completed!\n"
+  else
+    echo "Wrong arguments"
+  fi
+}
