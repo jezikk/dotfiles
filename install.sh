@@ -40,10 +40,6 @@ echo "➡️ Installing npm global packages..."
 sh ./npm/install.sh
 echo "✅ Successful installed\n"
 
-echo "➡️ Installing vscode extensions..."
-sh ./vscode/extensions.sh
-echo "✅ Successful installed\n"
-
 echo "➡️ Downloading external repos..."
 sh ./plugins/install.sh
 echo "✅ Completed\n"
