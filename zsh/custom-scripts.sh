@@ -38,6 +38,7 @@ function create_repo {
     git clone https://github.com/jezikk/next-tailwind-starter.git $2
     cd $2
     rm -rf .git
+    rm -f yarn.lock
     git init
 
     echo "\n📦 Downloading packages..."
