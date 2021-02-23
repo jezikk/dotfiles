@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Install native apps
 
@@ -27,7 +27,6 @@ brew cask install appcleaner
 brew cask install openinterminal
 brew cask install alfred
 brew cask install bartender
-brew cask install command-tab-plus
 brew cask install onedrive
 
 # video & audio

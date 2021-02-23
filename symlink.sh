@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DOTFILE_DIR=$HOME/.dotfiles
 

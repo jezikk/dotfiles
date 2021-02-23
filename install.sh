@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "💻 Setting up your Mac...\n"
 
@@ -40,12 +40,7 @@ echo "➡️ Installing npm global packages..."
 sh ./npm/install.sh
 echo "✅ Successful installed\n"
 
-echo "➡️ Downloading external repos..."
-sh ./plugins/install.sh
-echo "✅ Completed\n"
-
-echo "📁 Creating workspaces directories and activating settings..."
-sh ./macos/workspace.sh
+echo "📁 Activating settings..."
 sh ./macos/settings.sh
 echo "✅ Successful created workspaces\n"
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 mas install 497799835   # Xcode
 mas install 441258766   # Magnet
