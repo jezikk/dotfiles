@@ -21,5 +21,8 @@ brew install yarn
 brew install q
 brew install svn
 
+# https://github.com/vegardinho/alfred_bluetooth_controller
+brew install blueutil
+
 # Remove outdated versions from the cellar
 brew cleanup
