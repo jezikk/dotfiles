@@ -7,6 +7,7 @@ brew cask install 1password
 brew cask install google-chrome
 brew cask install microsoft-edge
 brew cask install transmission
+brew cask install transmit
 
 # dev
 brew cask install docker
