@@ -8,6 +8,7 @@ brew cask install google-chrome
 brew cask install microsoft-edge
 brew cask install transmission
 brew cask install transmit
+brew cask install shimo
 
 # dev
 brew cask install docker
@@ -28,6 +29,7 @@ brew cask install openinterminal
 brew cask install alfred
 brew cask install bartender
 brew cask install onedrive
+brew cask install citrix-workspace
 
 # video & audio
 brew cask install iina
@@ -38,3 +40,7 @@ brew cask install spotify
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 brew cask install font-input
+
+# drivers
+brew tap homebrew/cask-drivers
+brew cask install logitech-options
