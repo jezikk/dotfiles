@@ -13,6 +13,10 @@ function update_all {
   npm update -g
   echo "✅ Completed\n"
 
+  echo "🧭 Updating apple store apps..."
+  mas upgrade
+  echo "✅ Completed\n"
+
   echo "⚡️ All right! Your computer is up to date."
 }
 

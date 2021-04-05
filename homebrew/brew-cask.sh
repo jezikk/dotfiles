@@ -19,7 +19,6 @@ brew cask install figma
 
 # communication
 brew cask install skype
-brew cask install slack
 brew cask install microsoft-teams
 
 # tools
@@ -31,6 +30,8 @@ brew cask install onedrive
 
 # video & audio
 brew cask install iina
+brew cask install vlc
+brew cask install spotify
 
 # fonts
 brew tap homebrew/cask-fonts

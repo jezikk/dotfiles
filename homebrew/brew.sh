@@ -15,7 +15,6 @@ brew install antigen
 brew install fasd
 brew install ack
 brew install mas
-brew install midnight-commander
 brew install node
 brew install yarn
 brew install q
