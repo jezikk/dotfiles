@@ -21,22 +21,52 @@ function update_all {
 }
 
 function create_repo {
-  if ([ $1 = "next" ] && [ $# -eq 2 ]); then
-    echo "\n🧲 Downloading template repository..."
-    git clone https://github.com/jezikk/next-tailwind-starter.git $2
-    cd $2
+  if test ! $(which git); then
+    echo -e "⛔️ git must be installed"
+    return
+  fi
+
+  if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+    echo -e "⛔️ Wrong arguments"
+    return
+  fi
+
+  local REPO=$1
+  local FOLDER_NAME=$2
+  local PROJECT_NAME=$FOLDER_NAME
+
+  if [ $# -eq 3 ]; then
+    PROJECT_NAME=$3
+  fi
+
+  # Repos logic
+  if [ $REPO = "next" ]; then
+    if test ! $(which node); then
+      echo -e "⛔️ NodeJS must be installed"
+      return
+    fi
+
+    if test ! $(which yarn); then
+      echo -e "⛔️ yarn must be installed"
+      return
+    fi
+
+    echo -e "\n🧲 Downloading template repository...\n"
+    git clone --depth 1 -b main https://github.com/jezikk/next-tailwind-starter.git $FOLDER_NAME
+    cd $FOLDER_NAME
     rm -rf .git
     rm -f yarn.lock
     git init
 
-    echo "\n📦 Downloading packages..."
+    echo -e "\n🔧 Setting package.json:\n"
+    node -p "JSON.stringify({...require('./package.json'), name: '$PROJECT_NAME'}, null, 2)"
+
+    echo -e "\n📦 Downloading packages...\n"
     yarn install
+    cd ..
 
-    echo "\n🔧 package.json settings:"
-    node -p "JSON.stringify({...require('./package.json'), name: '$2'}, null, 2)"
-
-    echo "\n✅ Completed!\n"
+    echo -e "\n✅ Completed!"
   else
-    echo "Wrong arguments"
+    echo -e "⛔️ Unsupported repository name"
   fi
 }
