@@ -10,6 +10,7 @@ function update_all {
   echo "✅ Completed\n"
 
   echo "📦 Updating npm global packages..."
+  npm outdated --global
   npm update -g
   echo "✅ Completed\n"
 
