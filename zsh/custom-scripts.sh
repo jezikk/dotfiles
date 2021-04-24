@@ -1,20 +1,20 @@
 #!/bin/sh
 
 function update_all {
-  echo "📦 Updating homebrew apps..."
+  echo "📦 Updating homebrew apps...\n"
   brew update; brew upgrade; brew cleanup; brew doctor
   echo "✅ Completed\n"
 
-  echo "📦 Updating zsh..."
+  echo "📦 Updating zsh...\n"
   antigen update
   echo "✅ Completed\n"
 
-  echo "📦 Updating npm global packages..."
+  echo "📦 Updating npm global packages...\n"
   npm outdated --global
   npm update -g
   echo "✅ Completed\n"
 
-  echo "🧭 Updating apple store apps..."
+  echo "🧭 Updating apple store apps...\n"
   mas upgrade
   echo "✅ Completed\n"
 

@@ -12,22 +12,19 @@ antigen init $HOME/.antigenrc
 source $DOTFILES/zsh/custom-scripts.sh
 
 # Aliases
+alias ack.oracle="ack -i --type=oracle"
 alias antigen.rebuild="antigen reset"
 alias brew.update="brew update; brew upgrade; brew cleanup; brew doctor"
 alias dotfiles.config="code ~/.dotfiles"
+alias npm.global.list="npm list -g --depth=0"
+alias pip="pip3"
+alias python="python3"
 alias zsh.config="code ~/.zshrc"
 alias zsh.reload="source ~/.zshrc"
 
 alias cls="clear"
 alias ..="cd .."
 alias ....="cd ../.."
-
-alias npm.global.list="npm list -g --depth=0"
-
-alias ack.oracle="ack -i --type=oracle"
-
-alias python="python3"
-alias pip="pip3"
 
 # Autocomplete
 autoload -Uz compinit && compinit -i

@@ -3,7 +3,6 @@
 # Install native apps
 
 # web
-brew cask install 1password
 brew cask install google-chrome
 brew cask install microsoft-edge
 brew cask install transmission
@@ -28,13 +27,11 @@ brew cask install appcleaner
 brew cask install openinterminal
 brew cask install alfred
 brew cask install bartender
-brew cask install onedrive
 brew cask install citrix-workspace
 
 # video & audio
 brew cask install iina
 brew cask install vlc
-brew cask install spotify
 
 # fonts
 brew tap homebrew/cask-fonts
