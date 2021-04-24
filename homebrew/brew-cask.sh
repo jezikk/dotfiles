@@ -14,6 +14,7 @@ brew cask install docker
 brew cask install iterm2
 brew cask install visual-studio-code
 brew cask install postman
+brew cask install snagit
 
 # design
 brew cask install figma
