@@ -3,7 +3,8 @@ source /usr/local/share/antigen/antigen.zsh
 
 # Exports
 export DOTFILES="$HOME/.dotfiles"
-export PATH="/usr/local/sbin:$PATH"
+export N_PREFIX="$HOME/.nvm"
+export PATH="$HOME/.nvm/bin:/usr/local/sbin:$PATH"
 
 # Load Antigen configurations
 antigen init $HOME/.antigenrc
@@ -17,6 +18,7 @@ alias antigen.rebuild="antigen reset"
 alias brew.update="brew update; brew upgrade; brew cleanup; brew doctor"
 alias dotfiles.config="code ~/.dotfiles"
 alias npm.global.list="npm list -g --depth=0"
+alias nvm="n"
 alias pip="pip3"
 alias python="python3"
 alias zsh.config="code ~/.zshrc"

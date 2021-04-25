@@ -8,16 +8,16 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-brew install wget
-brew install zsh
+# brew install zsh
 brew install git
+brew install wget
 brew install antigen
 brew install fasd
 brew install ack
 brew install mas
 brew install node
+brew install n
 brew install yarn
-brew install q
 brew install svn
 
 # https://github.com/vegardinho/alfred_bluetooth_controller
