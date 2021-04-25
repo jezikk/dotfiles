@@ -33,7 +33,7 @@ fi
 echo "➡️ Installing homebrew/app store packages..."
 sh ./homebrew/brew.sh
 sh ./homebrew/brew-cask.sh
-sh ./macos/app-store.sh
+sh ./macos/mas.sh
 echo "✅ Successful installed\n"
 
 echo "➡️ Installing npm global packages..."
@@ -41,7 +41,7 @@ sh ./npm/install.sh
 echo "✅ Successful installed\n"
 
 echo "📁 Activating settings..."
-sh ./macos/settings.sh
+sh ./macos/defaults.sh
 echo "✅ Successful created workspaces\n"
 
 echo "🔗 Linking configuration files..."
