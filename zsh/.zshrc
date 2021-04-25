@@ -8,8 +8,8 @@ export PATH="/usr/local/sbin:$PATH"
 # Load Antigen configurations
 antigen init $HOME/.antigenrc
 
-# External scripts
-source $DOTFILES/zsh/custom-scripts.sh
+# Custom functions
+source $DOTFILES/zsh/functions.sh
 
 # Aliases
 alias ack.oracle="ack -i --type=oracle"
