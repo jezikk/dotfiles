@@ -26,9 +26,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
 # Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 

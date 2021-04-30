@@ -1,44 +1,41 @@
 #!/bin/sh
 
-# Install native apps
-
 # web
-brew cask install google-chrome
-brew cask install microsoft-edge
-brew cask install transmission
-brew cask install transmit
-brew cask install shimo
+brew install --cask google-chrome
+brew install --cask microsoft-edge
+brew install --cask transmission
+brew install --cask transmit
+brew install --cask shimo
 
 # dev
-brew cask install docker
-brew cask install iterm2
-brew cask install visual-studio-code
-brew cask install postman
-brew cask install snagit
+brew install --cask docker
+brew install --cask iterm2
+brew install --cask visual-studio-code
+brew install --cask postman
+brew install --cask snagit
 
 # design
-brew cask install figma
+brew install --cask figma
 
 # communication
-brew cask install skype
-brew cask install microsoft-teams
+brew install --cask skype
+brew install --cask microsoft-teams
 
 # tools
-brew cask install appcleaner
-brew cask install openinterminal
-brew cask install alfred
-brew cask install bartender
-brew cask install citrix-workspace
+brew install --cask appcleaner
+brew install --cask openinterminal
+brew install --cask alfred
+brew install --cask bartender
 
 # video & audio
-brew cask install iina
-brew cask install vlc
+brew install --cask iina
+brew install --cask vlc
 
 # fonts
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
-brew cask install font-input
+brew install --cask font-fira-code
+brew install --cask font-input
 
 # drivers
 brew tap homebrew/cask-drivers
-brew cask install logitech-options
+brew install --cask logitech-options

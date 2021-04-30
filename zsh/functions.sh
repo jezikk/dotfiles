@@ -5,8 +5,8 @@ function update_all {
   brew update; brew upgrade; brew cleanup; brew doctor
   echo "✅ Completed\n"
 
-  echo "📦 Updating zsh...\n"
-  antigen update
+  echo "🚀 Updating zsh...\n"
+  zsh.update
   echo "✅ Completed\n"
 
   echo "📦 Updating npm global packages...\n"

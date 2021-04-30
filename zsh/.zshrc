@@ -1,38 +1,26 @@
-# Load Antigen
-source /usr/local/share/antigen/antigen.zsh
-
 # Exports
 export DOTFILES="$HOME/.dotfiles"
 export N_PREFIX="$HOME/.nvm"
 export PATH="$HOME/.nvm/bin:/usr/local/sbin:$PATH"
 
-# Load Antigen configurations
-antigen init $HOME/.antigenrc
-
-# Custom functions
+# Load custom functions
 source $DOTFILES/zsh/functions.sh
 
-# Aliases
-alias ack.oracle="ack -i --type=oracle"
-alias antigen.rebuild="antigen reset"
-alias brew.update="brew update; brew upgrade; brew cleanup; brew doctor"
-alias dotfiles.config="code ~/.dotfiles"
-alias npm.global.list="npm list -g --depth=0"
-alias pip="pip3"
-alias python="python3"
-alias zsh.config="code ~/.zshrc"
-alias zsh.reload="source ~/.zshrc"
+# Load aliases
+source $DOTFILES/zsh/aliases.sh
 
-alias cls="clear"
-alias ..="cd .."
-alias ....="cd ../.."
+# Load antibody plugins
+source ~/.zsh_plugins.sh
 
 # Autocomplete
-autoload -Uz compinit && compinit -i
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
-# Case insensitive path-completion
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+# Load completion after autocomplete loads
+source $DOTFILES/zsh/completion.sh
 
-# Partial completion suggestions
-zstyle ':completion:*' list-suffixes
-zstyle ':completion:*' expand prefix suffix
+# Load secret things
+[ -f ~/.localrc ] && . ~/.localrc
