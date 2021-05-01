@@ -30,8 +30,5 @@ if ! zgen saved; then
     zgen save
 fi
 
-# Load completion after autocomplete loads
-source $DOTFILES/zsh/completion.sh
-
 # Load secret things
 [ -f ~/.localrc ] && . ~/.localrc
