@@ -20,22 +20,18 @@ if ! zgen saved; then
     # plugins
     zgen oh-my-zsh plugins/fasd
 
-    zgen load zsh-users/zsh-completions
+    zgen load zsh-users/zsh-completions src
     zgen load zsh-users/zsh-autosuggestions
-    zgen load zsh-users/zsh-syntax-highlighting
 
+    # Theme
     zgen load denysdovhan/spaceship-prompt
+
+    # Last
+    zgen load zsh-users/zsh-syntax-highlighting
 
     # generate the init script from plugins above
     zgen save
 fi
-
-# Case insensitive path-completion
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
-
-# Partial completion suggestions
-zstyle ':completion:*' list-suffixes
-zstyle ':completion:*' expand prefix suffix
 
 # Load secret things
 [ -f ~/.localrc ] && . ~/.localrc
