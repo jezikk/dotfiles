@@ -8,28 +8,32 @@ if test ! $(which brew); then
   echo "✅ Successful installed\n"
 fi
 
+echo "➡️ Installing zgen..."
+  touch ~/.hushlogin
+  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+echo "✅ Successful installed\n"
+
 echo "➡️ Installing homebrew/app store packages..."
-touch ~/.hushlogin
-sh ./homebrew/brew.sh
-sh ./homebrew/brew-cask.sh
-sh ./macos/mas.sh
+  source ./homebrew/brew.sh
+  source ./homebrew/brew-cask.sh
+  source ./macos/mas.sh
 echo "✅ Successful installed\n"
 
 echo "➡️ Installing npm global packages..."
-sh ./npm/install.sh
+  source ./npm/install.sh
 echo "✅ Successful installed\n"
 
 echo "📁 Activating settings..."
-sh ./macos/defaults.sh
+  source ./macos/defaults.sh
 echo "✅ Successful created workspaces\n"
 
 echo "🔗 Linking configuration files..."
-sh ./symlink.sh
+  source ./symlink.sh
 echo "✅ Successful linked configuration files\n"
 
 # Install configurations from zsh
 echo "🔧 Setting configuration to iTerm2 and zsh..."
-source $HOME/.zshrc
+  source $HOME/.zshrc
 echo "✅ Successful configured iTerm2 and zsh\n"
 
 echo "⚡️ All right! Restart your machine to complete the configuration."

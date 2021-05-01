@@ -11,7 +11,6 @@ brew upgrade
 # brew install zsh
 brew install git
 brew install wget
-brew install antibody
 brew install fasd
 brew install ack
 brew install mas

@@ -1,7 +1,0 @@
-# ohmyzsh/ohmyzsh path:plugins/fasd
-
-zsh-users/zsh-completions
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-syntax-highlighting
-
-denysdovhan/spaceship-prompt

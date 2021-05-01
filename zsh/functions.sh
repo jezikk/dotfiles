@@ -6,7 +6,8 @@ function update_all {
   echo "✅ Completed\n"
 
   echo "🚀 Updating zsh...\n"
-  zsh.update
+  zgen selfupdate
+  zgen update
   echo "✅ Completed\n"
 
   echo "📦 Updating npm global packages...\n"

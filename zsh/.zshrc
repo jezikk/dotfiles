@@ -3,21 +3,32 @@ export DOTFILES="$HOME/.dotfiles"
 export N_PREFIX="$HOME/.nvm"
 export PATH="$HOME/.nvm/bin:/usr/local/sbin:$PATH"
 
+# Load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
 # Load custom functions
 source $DOTFILES/zsh/functions.sh
 
 # Load aliases
 source $DOTFILES/zsh/aliases.sh
 
-# Load antibody plugins
-source ~/.zsh_plugins.sh
+# if the init script doesn't exist
+if ! zgen saved; then
 
-# Autocomplete
-autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+    zgen oh-my-zsh
+
+    # plugins
+    zgen oh-my-zsh plugins/fasd
+
+    zgen load zsh-users/zsh-completions
+    zgen load zsh-users/zsh-autosuggestions
+    zgen load zsh-users/zsh-syntax-highlighting
+
+    zgen load denysdovhan/spaceship-prompt
+
+    # generate the init script from plugins above
+    zgen save
+fi
 
 # Load completion after autocomplete loads
 source $DOTFILES/zsh/completion.sh
