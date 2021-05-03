@@ -12,6 +12,7 @@ brew upgrade
 brew install git
 brew install wget
 brew install fasd
+brew install fzf
 brew install ack
 brew install mas
 brew install node

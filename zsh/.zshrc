@@ -19,6 +19,7 @@ if ! zgen saved; then
 
     # plugins
     zgen oh-my-zsh plugins/fasd
+    zgen oh-my-zsh plugins/zsh-interactive-cd
 
     zgen load zsh-users/zsh-completions src
     zgen load zsh-users/zsh-autosuggestions

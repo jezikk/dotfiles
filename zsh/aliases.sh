@@ -8,6 +8,7 @@ alias pip="pip3"
 alias python="python3"
 alias zsh.config="code ~/.zshrc"
 alias zsh.reload="exec $SHELL -l"
+alias zsh.reset="zgen reset"
 alias zsh.update="zgen update"
 
 alias cls="clear"
