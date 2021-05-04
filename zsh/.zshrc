@@ -29,10 +29,14 @@ if ! zgen saved; then
 
     # Last
     zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-history-substring-search
 
     # generate the init script from plugins above
     zgen save
 fi
+
+bindkey '^[^[[A' history-substring-search-up
+bindkey '^[^[[B' history-substring-search-down
 
 # Load secret things
 [ -f ~/.localrc ] && . ~/.localrc
