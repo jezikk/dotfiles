@@ -1,3 +1,6 @@
+# Environment
+DISABLE_AUTO_UPDATE=true
+
 # Exports
 export DOTFILES="$HOME/.dotfiles"
 export N_PREFIX="$HOME/.nvm"
