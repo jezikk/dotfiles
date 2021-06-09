@@ -6,6 +6,8 @@ export DOTFILES="$HOME/.dotfiles"
 export N_PREFIX="$HOME/.nvm"
 export PATH="$HOME/.nvm/bin:/usr/local/sbin:$PATH"
 
+export SVN_EDITOR=vi
+
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
 

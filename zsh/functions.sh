@@ -18,6 +18,12 @@ function update_all {
   echo "⚡️ All right! Your computer is up to date."
 }
 
+function fetch_gli_repos {
+  svn update ~/Documents/Projects/Generali/Repositories/svn-tia-dev
+  svn update ~/Documents/Projects/Generali/Repositories/svn-tia-doc
+  echo "\n✅ Completed\n"
+}
+
 function create_repo {
   if test ! $(which git); then
     echo -e "⛔️ git must be installed"
