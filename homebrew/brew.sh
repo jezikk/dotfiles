@@ -13,12 +13,14 @@ brew install curl
 brew install eza
 brew install fzf
 brew install git
+brew install jq
 brew install n
 brew install node
 brew install php
 brew install rustup
 brew install starship
 brew install subversion
+brew install terraform
 brew install wget
 brew install zsh
 

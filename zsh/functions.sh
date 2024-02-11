@@ -23,9 +23,9 @@ function update_all {
   npm update -g
   echo "✅ Completed\n"
 
-  echo "🦀 Updating rust...\n"
-  rustup update stable
-  echo "✅ Completed\n"
+  # echo "🦀 Updating rust...\n"
+  # rustup update stable
+  # echo "✅ Completed\n"
 
   exec $SHELL -l
   echo "\n⚡️ All right! Your computer is up to date.\n"
