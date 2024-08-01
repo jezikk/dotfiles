@@ -31,6 +31,7 @@ alias grm='git rm'
 alias grmc='git rm --cached'
 alias gp='git push -u'
 alias gll='git log --oneline --decorate --graph'
+alias glp="git log --pretty='%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s' --date=short -7"
 alias gbd="git branch -D"
 alias gbl="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 alias gu="git pull"

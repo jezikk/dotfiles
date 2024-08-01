@@ -1,33 +1,26 @@
 [init]
 	defaultBranch = main
-
 [user]
 	name = Michal Vrbata
 	email = vrbata@outlook.com
-
 [pull]
 	rebase = true
-
+[color]
+  	ui = true
 [fetch]
-	prune = true
-
+  	prune = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-
 [merge]
   tool = vscode
-
 [mergetool "vscode"]
   cmd = code --wait $MERGED
-
 [diff]
   tool = vscode
-
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
-  
 [credential]
   helper = osxkeychain
