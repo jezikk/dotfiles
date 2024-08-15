@@ -22,7 +22,7 @@ alias la="eza -la --header --icons"
 
 alias dcd="docker compose down"
 alias dcu="docker compose up -d"
-alias dcub="docker compose up -d --build"
+alias dcb="docker compose down; docker compose up -d --build"
 
 alias gs="git status"
 alias gsb="git status --short --branch"
