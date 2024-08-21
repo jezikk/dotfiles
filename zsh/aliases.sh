@@ -43,6 +43,7 @@ alias gum="git pull --merge"
 alias gf="git fetch"
 alias gfs="git fetch; git status"
 alias gfl="git fetch; git --no-pager log --all --pretty='%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an%C(reset)%x09 %C(red)%d %C(reset)%s' --date=short -20"
+alias gr="git reset --hard HEAD"
 
 alias cls="clear"
 alias ..="cd .."
