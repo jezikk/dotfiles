@@ -14,6 +14,7 @@ brew install eza
 brew install fzf
 brew install git
 brew install jq
+brew install lazygit
 brew install n
 brew install node
 brew install php
