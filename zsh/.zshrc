@@ -6,6 +6,7 @@ export DOTFILES="$HOME/.dotfiles"
 export N_PREFIX="$HOME/.nvm"
 export PATH="$HOME/.nvm/bin:/opt/homebrew/bin:$PATH"
 export TNS_ADMIN="$HOME/Oracle/network/admin"
+export NODE_OPTIONS='--disable-warning=ExperimentalWarning'
 
 export SVN_EDITOR=vim
 
@@ -54,3 +55,4 @@ eval "$(starship init zsh)"
 # brew
 # alias brew='sudo -Hu jezikk brew'
 
+. "/Users/jezikk/.deno/env"
