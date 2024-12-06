@@ -24,6 +24,8 @@ alias dcd="docker compose down"
 alias dcu="docker compose up -d"
 alias dcb="docker compose down; docker compose up -d --build"
 
+alias p="pnpm"
+
 alias gs="git status"
 alias gsb="git status --short --branch"
 alias ga="git add"
