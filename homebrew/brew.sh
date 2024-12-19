@@ -20,6 +20,7 @@ brew install n
 brew install node
 brew install php
 brew install pnpm
+brew install sponge
 brew install starship
 brew install subversion
 brew install wget
