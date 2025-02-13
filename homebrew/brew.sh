@@ -15,6 +15,7 @@ brew install eza
 brew install fzf
 brew install git
 brew install jq
+brew install lazydocker
 brew install lazygit
 brew install n
 brew install node
